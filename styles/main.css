@@ -1,0 +1,124 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #f4f1ea;
+    color: #2d2d2d;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #e0c97d;
+}
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #2e2e2e;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 1rem;
+    color: #e0c97d;
+    text-decoration: none;
+    transition: .3s;
+}
+.navbar a:hover{
+    color: #b38800;
+}
+.navbar a.active {
+    color: #b38800;
+    text-decoration: overline
+}
+.navbar span {
+    margin-left: 1rem;
+    color: #e0c97d;
+}
+
+.home {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 2rem 2rem;
+    margin-top: 100px;
+}
+.homeMain {
+    gap: 3rem;
+    width: 100%;
+    max-width: 700px;
+}
+.homeMain h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+.homeMain p {
+    max-width: 600px;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navbar a, .navbar span {
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 5%;
+        min-height: auto;
+    }
+
+    .homeMain h1 {
+        font-size: 40px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .homeMain h1 {
+        font-size: 32px;
+    }
+}

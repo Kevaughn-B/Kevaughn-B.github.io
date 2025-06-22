@@ -2,14 +2,88 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/styles/main.css">
-        <title>Test</title>
+        <title>Kevaughn Benjamin - Homepage</title>
     </head>
     <body>
-        <header>
-            <h1>Test H</h1>
+        <header class="header">
+            <a href="#" class="logo">Kevaughn Benjamin.</a>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Sprinting</a>
+                <a href="#">Creatives</a>
+                <a href="#">Store</a>
+                <span class="divider">|</span>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
         </header>
+        <section class="home">
+            <div class="homeMain">
+                <h1>Hi, I'm Kevaughn Benjamin</h1>
+                <h3>The <span id="discipline"></span></h3>
+                <p>I’m a software engineer with a strong background in developing mobile and web applications, 
+                managing systems, and building scalable solutions across cloud platforms and networked environments. 
+                I specialize in delivering clean, efficient code and intuitive user experiences, with hands-on experience 
+                using a wide range of languages and development tools. Whether working solo or in a team, I approach every 
+                project with a problem-solving mindset and a drive to build impactful, real-world solutions.</p>
+                <p>I’m also a competitive sprinter, creative writer, and visual artist — disciplines that sharpen my focus, storytelling, 
+                and design sensibility. I’m passionate about connecting innovation with creativity, and I’m always eager to collaborate 
+                with forward-thinking individuals, brands, or organizations that value both technical skill and creative vision.</p>
+                <div class="homeSocials">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <script>
+            const words = ["Software Engineer.", "Sprinter.", "Artist.", "Writer."];
+            const element = document.getElementById("discipline");
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 75;
+            let pauseAfterTyping = 1000;
+            let pauseAfterDeleting = 300;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                
+                // Typing
+                if (!isDeleting) {
+                element.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === currentWord.length) {
+                    isDeleting = true;
+                    setTimeout(type, pauseAfterTyping); // Wait before deleting
+                    return;
+                }
+                }
+
+                // Deleting
+                else {
+                element.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    setTimeout(type, pauseAfterDeleting); // Wait before typing next word
+                    return;
+                }
+                }
+
+                setTimeout(type, isDeleting ? typingSpeed / 2 : typingSpeed);
+            }
+
+            document.addEventListener("DOMContentLoaded", type);
+        </script>
+        <!--
         <nav>
             <h1>Test N</h1>
         </nav>
@@ -25,5 +99,6 @@
         <footer>
             <h1>Test F</h1>
         </footer>
+        -->
     </body>
 </html>
