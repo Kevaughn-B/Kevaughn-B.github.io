@@ -73,6 +73,19 @@ body {
     margin-top: 1rem;
 }
 
+.asideBar {
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    text-align: center;
+    background-color: #2e2e2e;
+    display: flex;
+    flex-direction: column;
+}
+.asideBar a, span{
+    color: #e0c97d;
+}
+
 
 
 
