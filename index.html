@@ -11,6 +11,7 @@
     <body>
         <header class="header">
             <a href="#" class="logo">Kevaughn Benjamin.</a>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
             <nav class="navbar">
                 <a href="#" class="active">Home</a>
                 <a href="Portfolio.html">Portfolio</a>
@@ -98,6 +99,15 @@
             }
 
             document.addEventListener("DOMContentLoaded", type);
+        </script>
+        <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+            menuToggle.textContent = navbar.classList.contains('show') ? '✕' : '☰';
+        });
         </script>
         <!--
         <nav>
