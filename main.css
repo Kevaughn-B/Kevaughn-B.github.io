@@ -1,0 +1,280 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4f1ea;
+  color: #2d2d2d;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #e0c97d;
+}
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: #2e2e2e;
+  flex-wrap: wrap;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #e0c97d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #b38800;
+}
+
+.navbar a {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 1rem;
+  color: #e0c97d;
+  text-decoration: none;
+  transition: .3s;
+}
+.navbar a:hover{
+  color: #b38800;
+}
+.navbar a.active {
+  color: #b38800;
+  text-decoration: overline
+}
+.navbar span {
+  margin-left: 1rem;
+  color: #e0c97d;
+}
+
+.home {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 2rem 2rem;
+  margin-top: 100px;
+}
+.homeMain {
+  gap: 3rem;
+  width: 100%;
+  max-width: 700px;
+}
+.homeMain h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.homeMain p {
+  max-width: 600px;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.homeSocials {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 15px;
+}
+.homeSocials a {
+  width: 40px;
+  height: 40px;
+  background: #e0c97d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.homeSocials a:hover {
+  background: #b38800;
+  transform: translateY(-3px);
+}
+.homeSocials img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+h3 span {
+  color: #b38800;
+}
+
+footer {
+  background-color: #2e2e2e;
+  color: #e0c97d;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.footerSocials {
+  margin: 1rem;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.footerSocials a {
+  width: 30px;
+  height: 30px;
+  background: #e0c97d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.footerSocials a:hover {
+  background: #b38800;
+  transform: translateY(-3px);
+}
+.footerSocials img {
+  width: 20px;
+  height: 20px;
+}
+
+/* 🧠 Medium desktops & small laptops (≤ 1200px) */
+@media (max-width: 1200px) {
+.homeMain h1 {
+  font-size: 2.2rem;
+}
+
+.homeMain p {
+  font-size: 1.05rem;
+}
+
+.navbar a {
+  font-size: 18px;
+}
+}
+
+/* 📱 iPad / tablets (≤ 992px) */
+@media (max-width: 992px) {
+.header {
+  padding: 1.5rem 2rem;
+}
+
+.home {
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 3rem;
+}
+
+.homeMain h1 {
+  font-size: 2rem;
+}
+
+.homeMain p {
+  font-size: 0.95rem;
+}
+
+.asideBar ul {
+  padding: 0.5rem;
+}
+
+.asideBar li {
+  margin: 0.4rem 0;
+}
+}
+
+/* 📱 Mobile (≤ 768px) */
+@media (max-width: 768px) {
+.menu-toggle {
+  display: block;
+}
+
+.navbar {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #2e2e2e;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #b38800;
+  transition: all 0.3s ease;
+}
+
+.navbar.show {
+  display: flex;
+}
+
+.navbar a,
+.navbar span {
+  margin: 0.5rem 0;
+  font-size: 18px;
+}
+
+.home {
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.homeMain h1 {
+  font-size: 1.8rem;
+}
+
+.homeMain p {
+  font-size: 0.9rem;
+}
+}
+
+/* 📱 Small phones (≤ 480px) */
+@media (max-width: 480px) {
+.logo {
+  font-size: 20px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+}
+
+.homeMain h1 {
+  font-size: 1.6rem;
+}
+
+.homeMain p {
+  font-size: 0.85rem;
+}
+
+.navbar a {
+  font-size: 16px;
+}
+}
+
+/* 📱 Extra small screens (≤ 360px) */
+@media (max-width: 360px) {
+.logo {
+  font-size: 18px;
+}
+
+.homeMain h1 {
+  font-size: 1.4rem;
+}
+
+.homeMain p {
+  font-size: 0.8rem;
+}
+
+.navbar a {
+  font-size: 14px;
+}
+}

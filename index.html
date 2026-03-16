@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/main.css">
         <title>Kevaughn Benjamin - Homepage</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     </head>
@@ -13,17 +13,16 @@
             <a href="#" class="logo">Kevaughn Benjamin.</a>
             <div class="menu-toggle" id="menu-toggle">☰</div>
             <nav class="navbar" id="navbar">
-                <a href="#" class="active">Home</a>
-                <a href="Portfolio.html">Portfolio</a>
-                <a href="Sprinting.html">Sprinting</a>
-                <a href="Creatives.html">Creatives</a>
-                <a href="Store.html">Store</a>
+                <a href="#home_section" class="active">Home</a>
+                <a href="#about_section">About</a>
+                <a href="#skills_section">Skills</a>
+                <a href="#projects_section">Projects</a>
+                <a href="#resume_section">Resume</a>
                 <span class="divider">|</span>
-                <a href="Blog.html">Blog</a>
                 <a href="Contact.html">Contact</a>
             </nav>
         </header>
-        <section class="home">
+        <section class="home" id="home_section">
             <div class="homeMain">
                 <h1>Hi, I'm Kevaughn Benjamin</h1>
                 <h3>The <span id="discipline"></span></h3>
@@ -32,90 +31,42 @@
                 I specialize in delivering clean, efficient code and intuitive user experiences, with hands-on experience 
                 using a wide range of languages and development tools. Whether working solo or in a team, I approach every 
                 project with a problem-solving mindset and a drive to build impactful, real-world solutions.</p>
-                <p>I’m also a competitive sprinter, creative writer, and visual artist — disciplines that sharpen my focus, storytelling, 
-                and design sensibility. I’m passionate about connecting innovation with creativity, and I’m always eager to collaborate 
-                with forward-thinking individuals, brands, or organizations that value both technical skill and creative vision.</p>
+                <img src="/assets/images/headshot.png" alt="Kevaughn Benjamin Headshot" class="homeImg">
                 <div class="homeSocials">
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
+                    <a href="https://linkedin.com/in/kevaughn-benjamin-6148b430b" class="home__social-icon"><img src="/assets/images/linkedin-brands-solid.png" alt="LinkedIn"></a>
+                    <a href="https://instagram.com/kevaughn_benjamin" class="home__social-icon"><img src="/assets/images/square-instagram-brands-solid.png" alt="Instagram"></a>
+                    <a href="https://github.com/Kevaughn-B" class="home__social-icon"><img src="/assets/images/github-brands-solid.png" alt="GitHub"></a>
                 </div>
             </div>
         </section>
         <main>
-            <aside>
-                <div class="asideBar">
-                    <ul>
-                        <li><a href="https://www.youtube.com/@KevaughnBenjamin">Youtube</a></li>
-                        <li><a href="https://www.tiktok.com/@kevaughn_benjamin">Tiktok</a></li>
-                        <li><a href="https://">Instagram</a></li>
-                        <li><a href="https://x.com/thekevaughnb?s=21&t=O7Nz0aiytdlaw9Gv49cDkw">Twitter</a></li>
-                        <li><span class="divider">-</span></li>
-                        <li><a href="#">Place</a></li>
-                        <li><a href="https://linkedin.com/in/kevaughn-benjamin-6148b430b">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </aside>
+            <section class="about" id="about_section">
+                <h2>About Me</h2>
+            </section>  
+            <section class="skills" id="skills_section">
+                <h2>Skills</h2>
+            </section>
+            <section class="projects" id="projects_section">
+                <h2>Projects</h2>
+            </section>
+            <section class="resume" id="resume_section">
+                <h2>Resume</h2>
+            </section>
         </main>
-        <script>
-            const words = ["Software Engineer.", "Sprinter.", "Artist.", "Writer."];
-            const element = document.getElementById("discipline");
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            let typingSpeed = 75;
-            let pauseAfterTyping = 1000;
-            let pauseAfterDeleting = 300;
-
-            function type() {
-                const currentWord = words[wordIndex];
-                
-                // Typing
-                if (!isDeleting) {
-                element.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-
-                if (charIndex === currentWord.length) {
-                    isDeleting = true;
-                    setTimeout(type, pauseAfterTyping); // Wait before deleting
-                    return;
-                }
-                }
-
-                // Deleting
-                else {
-                element.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-
-                if (charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    setTimeout(type, pauseAfterDeleting); // Wait before typing next word
-                    return;
-                }
-                }
-
-                setTimeout(type, isDeleting ? typingSpeed / 2 : typingSpeed);
-            }
-
-            document.addEventListener("DOMContentLoaded", type);
-        </script>
-        <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navbar = document.getElementById('navbar');
-
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('show');
-            menuToggle.textContent = navbar.classList.contains('show') ? '✕' : '☰';
-        });
-        </script>
         <!--
         <nav>
             <h1>Test N</h1>
         </nav>
-        <footer>
-            <h1>Test F</h1>
-        </footer>
         -->
+        <footer>
+            <h1>Kevaughn Benjamin</h1>
+            <div class="footerSocials">
+                <a href="https://linkedin.com/in/kevaughn-benjamin-6148b430b" class="home__social-icon"><img src="/assets/images/linkedin-brands-solid.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/kevaughnbenjamin?igsh=bWFzZzg5c2sxYXZj&utm_source=qr" class="home__social-icon"><img src="/assets/images/square-instagram-brands-solid.png" alt="Instagram"></a>
+                <a href="https://github.com/Kevaughn-B" class="home__social-icon"><img src="/assets/images/github-brands-solid.png" alt="GitHub"></a>
+            </div>
+            <p>&copy; 2024 Kevaughn Benjamin. All rights reserved.</p>
+        </footer>
+        <script src="/scripts.js"></script>
     </body>
 </html>
