@@ -46,6 +46,7 @@
             </section>
             <section class="about" id="about_section">
                 <h2 class="mainSectionHeading">About Me</h2>
+                <p class="sectionPara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, aliquam dignissimos neque repellendus, vitae aut a incidunt perspiciatis nam voluptas iusto similique impedit numquam laboriosam consectetur totam sint soluta velit.</p>
                 <img src="/assets/images/headshot_2.png" alt="About Me Image" class="aboutImg">
             </section>  
             <section class="skills" id="skills_section">
@@ -274,10 +275,10 @@
             </section>
             <section class="contact" id="contact_section">
                 <h2 class="mainSectionHeading">Contact</h2>
-                <form class="contactForm">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" rows="5" required></textarea>
+                <form class="contactForm" id="contact-form">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
                     <button type="submit">Send</button>
                 </form>
             </section>
@@ -291,6 +292,7 @@
             </div>
             <p>&copy; 2024 Kevaughn Benjamin. All rights reserved.</p>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
         <script src="/scripts.js"></script>
     </body>
 </html>

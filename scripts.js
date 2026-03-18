@@ -48,3 +48,24 @@ const words = ["Software Engineer.", "Web Developer.", "Full Stack Developer.", 
     }
 
     document.addEventListener("DOMContentLoaded", type);
+
+(function(){
+  emailjs.init("0mmDsDRmPSZDSYEyg");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_z41nc58",
+    "template_6tdjtqn",
+    this
+  )
+  .then(function() {
+    document.getElementById("contact-form").reset();
+  alert("Message sent successfully! I'll get back to you soon.");
+  }, function(error) {
+    alert("Failed to send message. Try again.");
+    console.log(error);
+  });
+});
