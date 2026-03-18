@@ -69,3 +69,5 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     console.log(error);
   });
 });
+document.querySelector("footer p").innerHTML =
+`&copy; ${new Date().getFullYear()} Kevaughn Benjamin. All rights reserved.`;

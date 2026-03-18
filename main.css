@@ -2,9 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Inter', sans-serif;
 }
-
+:root {
+  --primary: #2e2e2e;
+  --accent: #b38800;
+  --accent-light: #e0c97d;
+  --bg: #f4f1ea;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -85,11 +90,11 @@ section {
   display: grid;
   grid-template-columns: 1.5fr 0.5fr;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .homeData {
   display: flex;
@@ -111,7 +116,7 @@ section {
   display: flex;
   justify-content: flex-start;
   margin: 0.5rem 0 0 0;
-  gap: 15px;
+  gap: 10px;
 }
 .homeSocials a {
   width: 40px;
