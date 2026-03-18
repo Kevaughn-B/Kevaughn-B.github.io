@@ -68,10 +68,6 @@ section {
 .navbar a:hover{
   color: #b38800;
 }
-.navbar a.active {
-  color: #b38800;
-  text-decoration: overline
-}
 .navbar span {
   margin-left: 1rem;
   color: #e0c97d;
@@ -234,6 +230,28 @@ section {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   border-radius: 10px;
   overflow: hidden;
+}
+.resumeActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem auto 2rem auto;
+  flex-wrap: wrap;
+}
+.viewResumeBtn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
+  background: #b38800;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.viewResumeBtn:hover {
+  background-color: #e0c97d;
 }
 .downloadResumeBtn {
   display: block;
