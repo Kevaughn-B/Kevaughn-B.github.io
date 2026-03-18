@@ -78,34 +78,43 @@ section {
 }
 
 .home {
-  min-height: 50vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
-  justify-content: left;
-  padding: 2rem 2rem;
+  justify-content: center;
+  padding: 2rem;
   margin-top: 100px;
 }
 .homeMain {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 0.5fr;
   width: 100%;
-  max-width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.homeData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .homeData h1 {
   font-size: 40px;
   font-weight: 1000;
 }
 .homeData p {
-  max-width: 600px;
+  max-width: 500px;
+  line-height: 1.6;
   font-size: 1.1rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .homeSocials {
   display: flex;
-  justify-content: center;
-  margin: 1rem 0;
+  justify-content: flex-start;
+  margin: 0.5rem 0 0 0;
   gap: 15px;
 }
 .homeSocials a {
@@ -130,7 +139,8 @@ section {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  display: flex;
+  display: block;
+  margin: 0 auto;
   justify-content: center;
   align-self: center;
   background: #e0c97d;
@@ -348,6 +358,18 @@ footer {
 .menu-toggle {
   display: block;
 }
+.homeMain {
+    grid-template-columns: 1fr; /* stack */
+    text-align: center;
+  }
+
+  .homeSocials {
+    justify-content: center; /* center icons on mobile */
+  }
+
+  .homeImg {
+    margin: 0 auto;
+  }
 .skillsContainer {
     grid-template-columns: 1fr;
   }
