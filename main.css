@@ -27,7 +27,8 @@ h3 span {
   text-align: center;
 }
 section {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 60px;
+  padding: 6rem 1.5rem;
 }
 
 .logo {
@@ -229,6 +230,35 @@ section {
   color: #555;
 }
 
+.psgitlink {
+  text-align: center;
+  margin-top: 2rem;
+}
+.projectSocials {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0 0 0;
+  gap: 10px;
+}
+.projectSocials a {
+  width: 40px;
+  height: 40px;
+  background: #e0c97d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.projectSocials a:hover {
+  background: #b38800;
+  transform: translateY(-3px);
+}
+.projectSocials img {
+  width: 30px;
+  height: 30px;
+}
+
 .resumeContainer {
   max-width: 900px;
   margin: 0 auto 1.5rem auto;
@@ -330,6 +360,14 @@ footer {
 .footerSocials img {
   width: 20px;
   height: 20px;
+}
+
+#constructionPlaceholder {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.8;
 }
 
 /* 🧠 Medium desktops & small laptops (≤ 1200px) */
