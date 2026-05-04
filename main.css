@@ -176,7 +176,7 @@ section {
 }
 .skillsContainer {
   display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 400px));
+  grid-template-columns: repeat(3, minmax(280px, 400px));
   gap: 2rem;
   justify-content: center;
 }
