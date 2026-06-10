@@ -4,9 +4,9 @@ My Personal Website
 ## Stack
 
 ### Frontend
-React
-TypeScript
-Vite
+> React
+< TypeScript
+- Vite
 Tailwind CSS
 Responsive HTML5 and CSS3
 Component-based architecture
