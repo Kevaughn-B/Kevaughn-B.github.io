@@ -34,7 +34,7 @@ export const Hero = () => (
           Full-Stack Software Engineer & Web Developer
         </p>
         <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-2xl">
-          Building scalable web applications, APIs, and modern digital experiences — engineered with
+          Building scalable web applications, APIs, and modern digital experiences, engineered with
           performance, accessibility, and craft in mind.
         </p>
 
@@ -43,7 +43,7 @@ export const Hero = () => (
             <a href="#projects">View Projects <ArrowRight className="ml-1 h-4 w-4" /></a>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <a href="/resume.pdf" download>
+            <a href="/Kevaughn_Benjamin-Resume.pdf" download>
               <Download className="mr-1 h-4 w-4" /> Download Resume
             </a>
           </Button>

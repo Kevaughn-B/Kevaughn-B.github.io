@@ -16,8 +16,8 @@ export const About = () => (
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
           <p>
-            I'm a <span className="text-foreground font-medium">junior software engineer</span> based in
-            Manchester, Jamaica, with hands-on experience in web and mobile application development.
+            I'm a <span className="text-foreground font-medium">Software Engineer & Web Developer</span> based in
+            Manchester, Jamaica, with hands-on experience in Full-Stack Web and Mobile application development.
           </p>
           <p>
             I'm proficient in Python, JavaScript, Java and C#, with a working knowledge of relational
@@ -25,8 +25,9 @@ export const About = () => (
             and performant code that solves real problems.
           </p>
           <p>
-            Strong problem-solving, adaptability, and a genuine passion for learning new technologies
-            keep me growing — whether shipping side projects or supporting a team.
+            With strong problem-solving skills, adaptability, creativity, and a genuine passion for learning new technologies
+            that keep me growing, I have gained experience through side projects, freelance work, and/or supporting a team that have proven beneficial
+            in my career.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-4">

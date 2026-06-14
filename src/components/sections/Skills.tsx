@@ -3,16 +3,20 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Code, Layout, Server, Database, Cloud, Wrench, Monitor,
+  Book, Gamepad, Users,
 } from "lucide-react";
 
 const groups = [
-  { icon: Code, title: "Languages", items: ["Python", "Java", "Kotlin", "JavaScript (ES6+)", "TypeScript", "C#"] },
+  { icon: Code, title: "Languages", items: ["Python", "JavaScript (ES6+)", "TypeScript", "C#",  "Java", "Kotlin", "PHP"] },
   { icon: Layout, title: "Frontend", items: ["HTML5", "CSS3", "React", "Vue.js"] },
-  { icon: Server, title: "Backend", items: ["FastAPI", "Django", "Node.js", "Express.js", "Spring Boot", "ASP.NET"] },
+  { icon: Server, title: "Backend", items: ["FastAPI", "Django", "Node.js", "Express.js", "Spring Boot", "ASP.NET", "Laravel"] },
   { icon: Database, title: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase"] },
   { icon: Cloud, title: "Cloud & DevOps", items: ["AWS (EC2, S3)", "Microsoft Azure", "Google Cloud Platform", "Docker"] },
   { icon: Wrench, title: "Developer Tools", items: ["Git/GitHub", "VS Code", "Visual Studio", "IntelliJ IDEA", "Eclipse", "Postman", "JetBrains Rider"] },
   { icon: Monitor, title: "Operating Systems", items: ["Windows", "macOS", "Linux", "Android"] },
+  { icon: Gamepad, title: "Game Development", items: ["Unity", "Unreal Engine 5", "Godot", "Blender" ] },
+  { icon: Book, title: "Learning", items: ["Cobol", "SQL", "Swift", "Bash"]},
+  { icon: Users, title: "Soft Skills", items: ["Motivated & Fast Learner", "Problem Solving", "Communication", "Collaboration", "Independent Work", "Remote Work", "Adaptability", "Teamwork", "Time Management", "Attention to Detail", "Critical Thinking", "Continuous Learning"]},
 ];
 
 export const Skills = () => (
@@ -44,4 +48,5 @@ export const Skills = () => (
       </div>
     </div>
   </section>
+
 );
