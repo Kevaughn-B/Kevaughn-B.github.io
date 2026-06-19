@@ -54,7 +54,7 @@ export const Contact = () => {
         <SectionHeader
           eyebrow="Contact"
           title="Let's build something."
-          description="Open to full-time, contract, and freelance opportunities. I usually reply within a day."
+          description="Open to full-time, contract, and freelance opportunities. I usually reply within 24 hours."
         />
         <div className="grid lg:grid-cols-5 gap-6">
           <Card className="lg:col-span-2 p-6 shadow-card border-border/50 space-y-5">
