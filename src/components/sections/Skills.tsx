@@ -16,7 +16,7 @@ const groups = [
   { icon: Monitor, title: "Operating Systems", items: ["Windows", "macOS", "Linux", "Android"] },
   { icon: Gamepad, title: "Game Development", items: ["Unity", "Unreal Engine 5", "Godot", "Blender" ] },
   { icon: Book, title: "Learning", items: ["Cobol", "SQL", "Swift", "Bash"]},
-  { icon: Users, title: "Soft Skills", items: ["Motivated & Fast Learner", "Problem Solving", "Communication", "Collaboration", "Independent Work", "Remote Work", "Adaptability", "Teamwork", "Time Management", "Attention to Detail", "Critical Thinking", "Continuous Learning"]},
+  { icon: Users, title: "Soft Skills", items: ["Motivated & Fast Learner", "Problem Solving", "Communication", "Collaboration", "Adaptability", "Teamwork", "Time Management", "Attention to Detail", "Critical Thinking", "Continuous Learning"]},
 ];
 
 export const Skills = () => (
