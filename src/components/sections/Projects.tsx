@@ -13,6 +13,7 @@ interface Project {
   stack: string[];
   github?: string;
   demo?: string;
+  image?: string;
 }
 
 const projects: Project[] = [
@@ -70,6 +71,7 @@ const projects: Project[] = [
     stack: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/Kevaughn-B/AI-Assistant-Git",
     demo: "https://ai-assistant-t0m0.onrender.com/",
+    image: "src/assets/images/projectDemos/ASA.png",
   },
 ];
 
@@ -114,11 +116,21 @@ export const Projects = () => {
               className="group overflow-hidden shadow-card hover:shadow-elegant transition-smooth border-border/50 flex flex-col"
             >
               <div className="relative aspect-video gradient-hero overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-4xl font-bold text-primary-foreground/30 group-hover:text-primary-foreground/60 transition-smooth">
-                    {p.title.split(" ").map((w) => w[0]).join("").slice(0, 3)}
-                  </span>
-                </div>
+                <div className="relative aspect-video gradient-hero overflow-hidden">
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="font-display text-4xl font-bold text-primary-foreground/30 group-hover:text-primary-foreground/60 transition-smooth">
+                      {p.title.split(" ").map((w) => w[0]).join("").slice(0, 3)}
+                    </span>
+                  </div>
+                )}
+              </div>
                 <div className="absolute inset-0" style={{ background: "var(--gradient-radial)" }} />
               </div>
               <div className="p-6 flex-1 flex flex-col">
@@ -133,9 +145,22 @@ export const Projects = () => {
                   ))}
                 </ul>
                 {p.achievement && (
-                  <div className="mt-4 flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/20">
-                    <Sparkles className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground/90">{p.achievement[0]}</span>
+                  <div className="mt-4 p-3 rounded-lg bg-primary/5 border border-primary/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Sparkles className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="text-sm font-medium text-foreground/90">
+                        Achievements
+                      </span>
+                    </div>
+
+                    <ul className="space-y-1.5 text-sm">
+                      {p.achievement.map((achievement) => (
+                        <li key={achievement} className="flex gap-2">
+                          <span className="text-primary">▸</span>
+                          <span className="text-muted-foreground">{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 )}
                 <div className="mt-5 flex flex-wrap gap-1.5">
