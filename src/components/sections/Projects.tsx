@@ -9,7 +9,7 @@ interface Project {
   title: string;
   description: string;
   features: string[];
-  achievement?: string;
+  achievement?: string[];
   stack: string[];
   github?: string;
   demo?: string;
@@ -24,7 +24,7 @@ const projects: Project[] = [
       "Financial analytics dashboard and visualizations",
       "Real-time spending insights and budgeting tools",
     ],
-    achievement: "Users can log and categorize expenses in under 10 seconds.",
+    achievement: ["Users can log and categorize expenses in under 10 seconds."],
     stack: ["FastAPI", "Python", "PostgreSQL"],
     github: "#",
   },
@@ -53,14 +53,23 @@ const projects: Project[] = [
   },
   {
     title: "AI Student Academic Assistant",
-    description: "Intelligent academic support platform that helps students study smarter.",
+    description: "Academic support platform powered by AI that helps students study/learn and make smarter decisions.",
     features: [
-      "PDF text extraction",
+      "Account-based access with password hashing and CSRF protection",
       "NLP-powered question answering",
       "Personalized recommendations and web API integrations",
+      "Google Books and optional SerpAPI recommendations",
+      "PDF text extraction, download, and per-user document management",
+      "Private dashboards and Q&A search history"
+    ],
+    achievement: [
+      "Students can ask questions and get answers in under 5 seconds.",
+      "Recommendations are personalized based on user history and web searches.",
+      "Students can access their private dashboards and search history at any time."
     ],
     stack: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
-    github: "#",
+    github: "https://github.com/Kevaughn-B/AI-Assistant-Git",
+    demo: "https://ai-assistant-t0m0.onrender.com/",
   },
 ];
 
@@ -126,7 +135,7 @@ export const Projects = () => {
                 {p.achievement && (
                   <div className="mt-4 flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/20">
                     <Sparkles className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground/90">{p.achievement}</span>
+                    <span className="text-sm text-foreground/90">{p.achievement[0]}</span>
                   </div>
                 )}
                 <div className="mt-5 flex flex-wrap gap-1.5">
