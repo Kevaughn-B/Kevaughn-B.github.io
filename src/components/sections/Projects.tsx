@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Sparkles } from "lucide-react";
+import ASA from "@/assets/images/projectDemos/ASA.png";
 
 interface Project {
   title: string;
@@ -19,19 +20,23 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Smart Budgeting App",
-    description: "Full-stack budgeting platform for tracking income, expenses, and goals across multiple users.",
+    description:
+      "Full-stack budgeting platform for tracking income, expenses, and goals across multiple users.",
     features: [
       "Multi-user income, expense & budget tracking",
       "Financial analytics dashboard and visualizations",
       "Real-time spending insights and budgeting tools",
     ],
-    achievement: ["Users can log and categorize expenses in under 10 seconds."],
+    achievement: [
+      "Users can log and categorize expenses in under 10 seconds.",
+    ],
     stack: ["FastAPI", "Python", "PostgreSQL"],
     github: "#",
   },
   {
     title: "Personal Portfolio Website",
-    description: "Responsive portfolio site focused on accessibility, keyboard navigation, and crisp UX.",
+    description:
+      "Responsive portfolio site focused on accessibility, keyboard navigation, and crisp UX.",
     features: [
       "Accessibility and keyboard navigation",
       "Clean UI/UX and cross-device compatibility",
@@ -43,7 +48,8 @@ const projects: Project[] = [
   },
   {
     title: "Grocery List Android App",
-    description: "Mobile grocery planner with cloud sync and offline-first capabilities.",
+    description:
+      "Mobile grocery planner with cloud sync and offline-first capabilities.",
     features: [
       "Firebase authentication and cloud sync",
       "Offline and online functionality",
@@ -54,35 +60,45 @@ const projects: Project[] = [
   },
   {
     title: "AI Student Academic Assistant",
-    description: "Academic support platform powered by AI that helps students study/learn and make smarter decisions.",
+    description:
+      "Academic support platform powered by AI that helps students study/learn and make smarter decisions.",
     features: [
       "Account-based access with password hashing and CSRF protection",
       "NLP-powered question answering",
       "Personalized recommendations and web API integrations",
       "Google Books and optional SerpAPI recommendations",
       "PDF text extraction, download, and per-user document management",
-      "Private dashboards and Q&A search history"
+      "Private dashboards and Q&A search history",
     ],
     achievement: [
       "Students can ask questions and get answers in under 5 seconds.",
       "Recommendations are personalized based on user history and web searches.",
-      "Students can access their private dashboards and search history at any time."
+      "Students can access their private dashboards and search history at any time.",
     ],
     stack: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/Kevaughn-B/AI-Assistant-Git",
     demo: "https://ai-assistant-t0m0.onrender.com/",
-    image: "src/assets/images/projectDemos/ASA.png",
+    image: ASA,
   },
 ];
 
 export const Projects = () => {
   const techs = useMemo(() => {
     const set = new Set<string>();
-    projects.forEach((p) => p.stack.forEach((s) => set.add(s)));
+
+    projects.forEach((p) => {
+      p.stack.forEach((s) => set.add(s));
+    });
+
     return ["All", ...Array.from(set)];
   }, []);
+
   const [filter, setFilter] = useState("All");
-  const filtered = filter === "All" ? projects : projects.filter((p) => p.stack.includes(filter));
+
+  const filtered =
+    filter === "All"
+      ? projects
+      : projects.filter((p) => p.stack.includes(filter));
 
   return (
     <section id="projects" className="py-24 sm:py-32">
@@ -115,27 +131,38 @@ export const Projects = () => {
               key={p.title}
               className="group overflow-hidden shadow-card hover:shadow-elegant transition-smooth border-border/50 flex flex-col"
             >
+              {/* Project Screenshot */}
               <div className="relative aspect-video gradient-hero overflow-hidden">
-                <div className="relative aspect-video gradient-hero overflow-hidden">
                 {p.image ? (
                   <img
                     src={p.image}
-                    alt={p.title}
+                    alt={`${p.title} screenshot`}
                     className="w-full h-full object-cover"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <span className="font-display text-4xl font-bold text-primary-foreground/30 group-hover:text-primary-foreground/60 transition-smooth">
-                      {p.title.split(" ").map((w) => w[0]).join("").slice(0, 3)}
+                      {p.title
+                        .split(" ")
+                        .map((w) => w[0])
+                        .join("")
+                        .slice(0, 3)}
                     </span>
                   </div>
                 )}
               </div>
-                <div className="absolute inset-0" style={{ background: "var(--gradient-radial)" }} />
-              </div>
+
+              {/* Project Information */}
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="font-display text-xl font-semibold">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
+                <h3 className="font-display text-xl font-semibold">
+                  {p.title}
+                </h3>
+
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {p.description}
+                </p>
+
+                {/* Features */}
                 <ul className="mt-4 space-y-1.5 text-sm">
                   {p.features.map((f) => (
                     <li key={f} className="flex gap-2">
@@ -144,10 +171,13 @@ export const Projects = () => {
                     </li>
                   ))}
                 </ul>
+
+                {/* Achievements */}
                 {p.achievement && (
                   <div className="mt-4 p-3 rounded-lg bg-primary/5 border border-primary/20">
                     <div className="flex items-center gap-2 mb-2">
                       <Sparkles className="h-4 w-4 text-primary flex-shrink-0" />
+
                       <span className="text-sm font-medium text-foreground/90">
                         Achievements
                       </span>
@@ -157,29 +187,57 @@ export const Projects = () => {
                       {p.achievement.map((achievement) => (
                         <li key={achievement} className="flex gap-2">
                           <span className="text-primary">▸</span>
-                          <span className="text-muted-foreground">{achievement}</span>
+
+                          <span className="text-muted-foreground">
+                            {achievement}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
+
+                {/* Technology Stack */}
                 <div className="mt-5 flex flex-wrap gap-1.5">
                   {p.stack.map((s) => (
-                    <Badge key={s} variant="secondary" className="font-mono text-[10px] font-normal">{s}</Badge>
+                    <Badge
+                      key={s}
+                      variant="secondary"
+                      className="font-mono text-[10px] font-normal"
+                    >
+                      {s}
+                    </Badge>
                   ))}
                 </div>
+
+                {/* Project Links */}
                 <div className="mt-5 flex gap-2 pt-4 border-t border-border/50">
                   {p.github && (
                     <Button asChild size="sm" variant="outline">
-                      <a href={p.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-1" /> Code
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="h-4 w-4 mr-1" />
+                        Code
                       </a>
                     </Button>
                   )}
+
                   {p.demo && (
-                    <Button asChild size="sm" className="gradient-primary text-primary-foreground border-0">
-                      <a href={p.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-1" /> Live Demo
+                    <Button
+                      asChild
+                      size="sm"
+                      className="gradient-primary text-primary-foreground border-0"
+                    >
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-1" />
+                        Live Demo
                       </a>
                     </Button>
                   )}
